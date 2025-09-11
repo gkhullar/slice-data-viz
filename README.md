@@ -1,7 +1,7 @@
 # slice-data-viz
 
 **Data Visualizer for RGB images of JWST-SLICE Galaxy Clusters**
-<img width="400" height="360" alt="image" src="https://github.com/user-attachments/assets/6dd7c9b5-1c1c-4bfe-a980-e50d40fce781" />
+<img width="400" height="370" alt="image" src="https://github.com/user-attachments/assets/6dd7c9b5-1c1c-4bfe-a980-e50d40fce781" />
 
 This repository provides tools for processing James Webb Space Telescope (JWST) observations of galaxy clusters from the SLICE survey and creating beautiful RGB composite images. The pipeline handles FITS file preprocessing, coordinate alignment, and advanced RGB image creation with astronomy-specific stretch algorithms.
 
