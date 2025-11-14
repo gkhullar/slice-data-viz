@@ -207,6 +207,49 @@ For each processed galaxy cluster, the pipeline generates:
 
 See `PSZ2G147_RGB.png` for an example of the RGB composite image quality achievable with this pipeline.
 
+## Creating Interactive FITSMap Visualizations
+
+After processing your FITS files into RGB composites, you can create an interactive web-based FITSMap visualization for exploring your data. The FITSMap tool provides an interactive viewer that allows you to pan, zoom, and explore your processed galaxy cluster images through a web browser.
+
+### Basic FITSMap Creation with Web Server
+
+To create an interactive FITSMap and launch a local web server to view it:
+
+```bash
+python create_fitsmap.py ./processed_fits_rgb ./output_maps --serve
+```
+
+This command does the following:
+
+1. **Input Directory** (`./processed_fits_rgb`): Reads the processed RGB FITS files from this directory
+2. **Output Directory** (`./output_maps`): Generates the FITSMap visualization files in this directory
+3. **Web Server** (`--serve` flag): Automatically starts a local web server to view the interactive map
+
+### Usage Details
+
+The `create_fitsmap.py` script converts your processed FITS images into an interactive web-based viewer:
+
+- **Input**: Processed FITS RGB files (typically the output from `combined_fits_rgb_processor.py`)
+- **Output**: HTML/JavaScript-based interactive map with tiled images for efficient viewing
+- **Server**: The `--serve` flag launches a local HTTP server, making the FITSMap immediately accessible in your web browser
+
+### Workflow Example
+
+Complete workflow from raw data to interactive visualization:
+
+```bash
+# Step 1: Process raw JWST FITS files into RGB composites
+python combined_fits_rgb_processor.py \
+    --input-dir ./data \
+    --output-dir ./processed_fits_rgb \
+    -r f322w2 -g f322w2 -b f150w2
+
+# Step 2: Create interactive FITSMap and launch web viewer
+python create_fitsmap.py ./processed_fits_rgb ./output_maps --serve
+```
+
+After running these commands, your browser will open (or you can navigate to the provided URL) to explore your galaxy cluster observations interactively.
+
 ## Contributing
 
 When contributing to this project:
