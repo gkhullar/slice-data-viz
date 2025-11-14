@@ -273,4 +273,4 @@ See `LICENSE` file for license information.
 
 ## Related Projects
 
-This tool is designed for the SLICE (Survey of Lensing clusters In CosmoS-simulation) galaxy cluster survey using JWST observations.
+This tool is designed for the SLICE galaxy cluster survey using JWST observations.
